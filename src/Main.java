@@ -201,6 +201,7 @@ public class Main {
         //Stream
         Collection<Integer> collection = Arrays.asList(1, 2, 3);
         System.out.println(collection);
+        https://codelearn.io/sharing/stream-xu-ly-du-lieu-the-nao-trong-java
 
 
 //        Lớp Arrays
@@ -232,6 +233,9 @@ public class Main {
 
         System.out.println("equals: "+Arrays.equals(s1, s2));                           //so sánh mảng 1 chiều
         System.out.println("deepEquals: "+Arrays.deepEquals(s1, s2));                   //so sánh mảng 2 chiều
+
+        // https://freetuts.net/tong-quan-ve-collections-trong-java-1070.html
+        // https://freetuts.net/set-interface-trong-java-1080.html
 //        https://topdev.vn/blog/lam-ban-ve-tham-chieu-tham-tri-trong-java/
 //        https://chuyenmucit.code.blog/2020/08/01/van-de-ve-pointer-huong-doi-tuong/
     }
