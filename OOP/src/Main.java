@@ -29,6 +29,6 @@ class Math {
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        IHuman<Math> man=new Student<Math>();
+//        IHuman<Math> man=new Student<Math>();
     }
 }
