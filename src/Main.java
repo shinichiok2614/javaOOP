@@ -186,40 +186,11 @@ public class Main {
         treesetInteger.add(11);
         treesetInteger.add(12);
         treesetInteger.add(13);
-        System.out.println("treeSetInteger: " + treesetInteger);
-//        HashSet: Initial capacity, Load factor                           //chưa thấy khác gì voi set
-//        Nguong hashSet: Threshold = Current capacity * Load factor        //16 * 0.75 = 12: khi phần tử thứ 12 được thêm vào, 16 lên 32
-        HashSet<Integer> hashSet = new HashSet<>();
-        hashSet.add(1);
-        hashSet.add(2);
-        hashSet.add(3);
-        Integer[] arraySetInteger = new Integer[hashSet.size()];
-        hashSet.toArray(arraySetInteger);                                   //hashSet->Arrays
-        System.out.println("arraySetInteger: " + Arrays.toString(arraySetInteger));
-
-//        SortedSet: interface
-        SortedSet<Integer> sortedSet = new TreeSet<>();
-        //TreeSet                                                           //tu dong sap xep tang dan
-        TreeSet<Integer> treeSet = new TreeSet<>();
-        treeSet.add(2);
-        treeSet.add(1);
-        treeSet.add(4);
-        treeSet.add(3);
-        treeSet.add(6);
-        System.out.println("treeSet: " + treeSet);
-        SortedSet<Integer> subSet = treeSet.subSet(2, 4);                      //subSet: copy tu 2->4
-        System.out.println("subSet: " + subSet);
-        SortedSet<Integer> headSet = treeSet.headSet(3);             //headSet: copy tu 0->3, Char: thi copy neu pht ===" "
-        System.out.println("headSet: " + headSet);
-        SortedSet<Integer> tailSet = treeSet.tailSet(2);             //tailSet: copy tu 2->cuoi
-        System.out.println("tailSet: " + tailSet);
-        System.out.println("first: " + treeSet.first());                      //phan tu dau tien === nho nhat
-        System.out.println("last: " + treeSet.last());                        //phan tu cuoi cung === lon nhat
+        System.out.println("treesetInteger: " + treesetInteger);
 
         //List->Set
         List<Integer> listInteger = new ArrayList<>();
         listInteger.add(3);
-
         listInteger.add(10);
         listInteger.add(2);
         System.out.println("listInteger: " + listInteger);
@@ -253,45 +224,17 @@ public class Main {
         Integer[] i8 = Arrays.copyOfRange(i3, 1, 8);
         System.out.println("i8: " + Arrays.toString(i8));                              //giống copy nhưng được chọn điểm bắt đầu
         List<Integer> list = Arrays.asList(i3);
-        System.out.println("list: " + list);                                              //mảng wraper ->List
-        System.out.println("Arrays.equals(i3,i4): " + Arrays.equals(i3, i4));              //so sánh hai mảng wraper
+        System.out.println("list: "+list);                                              //mảng wraper ->List
+        System.out.println("Arrays.equals(i3,i4): "+Arrays.equals(i3,i4));              //so sánh hai mảng wraper
 
-        String[][] s1 = {{"java", "swings", "j2ee"}, {"struts", "jsp", "hibernate"}};
-        String[][] s2 = {{"java", "swings", "j2ee"}, {"struts", "jsp", "hibernate"}};
+        String[][] s1 = { { "java", "swings", "j2ee" }, { "struts", "jsp", "hibernate" } };
+        String[][] s2 = { { "java", "swings", "j2ee" }, { "struts", "jsp", "hibernate" } };
 
-        System.out.println("equals: " + Arrays.equals(s1, s2));                           //so sánh mảng 1 chiều
-        System.out.println("deepEquals: " + Arrays.deepEquals(s1, s2));                   //so sánh mảng 2 chiều
+        System.out.println("equals: "+Arrays.equals(s1, s2));                           //so sánh mảng 1 chiều
+        System.out.println("deepEquals: "+Arrays.deepEquals(s1, s2));                   //so sánh mảng 2 chiều
 //        https://topdev.vn/blog/lam-ban-ve-tham-chieu-tham-tri-trong-java/
 //        https://chuyenmucit.code.blog/2020/08/01/van-de-ve-pointer-huong-doi-tuong/
     }
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
