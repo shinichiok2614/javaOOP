@@ -82,8 +82,6 @@ public class Main {
         for (int i = 0; i < array.length; i++) System.out.println("array[" + i + "]: " + array[i]);
         for (int i = 0; i < mang1chieu2.length; i++) System.out.println("mang1chieu2[" + i + "]: " + mang1chieu2[i]);
 
-//        lamda
-
 
 //        mảng 2 chiều
         int mang2c[][];    //khai báo
@@ -108,14 +106,40 @@ public class Main {
         listString.add("Four");
         listString.add(3, "Five");   //chèn vào vị trí 4
         listString2.add("Seven");
-        listString.addAll(listString);
+
+        listString.addAll(listString);                                  //addAll
         listString.addAll(1, listString2);
 
         System.out.println("listString: " + listString);
 //        for cải tiến
         for (String e : listString) System.out.println("for: " + e);
 
-        //iterator
+        System.out.println("listString.get(0): "+listString.get(0));                //get
+        listString.set(0,"One set");                                                //set
+        System.out.println("listString.set(0,\"One set\"): "+listString.get(0));
+        System.out.println("listString: "+listString);
+        listString.remove(0);                                                 //xoa theo chi so
+        System.out.println("remove(0): "+listString);
+        listString.remove("Seven");
+        System.out.println("remove(\"Seven\"): "+listString);                       //xoa theo noi dung
+        System.out.println("listString.contains(\"Two\"): "+listString.contains("Two"));          //constain: ton tai?
+        System.out.println("listString.indexOf(\"Two\"): "+listString.indexOf("Two"));            //indexOf:  vi tri dau tien
+        System.out.println("listString.indexOf(\"Three\"): "+listString.indexOf("Three"));
+        System.out.println("listString.lastIndexOf(\"Three\"): "+listString.lastIndexOf("Three"));  //lastIndexOf
+        Collections.sort(listString);                                                               //sort
+        System.out.println("Collections.sort(listString): "+listString);
+//        String[] listCopy={};                                                                        //khai bao va cap phat null
+//        System.out.println("listCopy: "+Arrays.toString(Arrays.copyOf(listCopy, 9)));
+        List<String> listCopy1 = new ArrayList<>();
+        listCopy1.addAll(Collections.nCopies(9,null));                                      //addAll
+        System.out.println("listCopy1: "+listCopy1);
+//        listCopy1.addAll()
+        Collections.copy(listCopy1, listString);                                                  //muon copy phai List<>
+        System.out.println("listCopy1:  "+listCopy1);
+        listCopy1.replaceAll((names)->names.concat(" replace"));                              //replaceAll
+        System.out.println("listCopy1: "+listCopy1);
+
+//        iterator
         Iterator<String> iter = null;
         iter = listString.iterator();
         while (iter.hasNext()) System.out.println("iterator: " + iter.next());
