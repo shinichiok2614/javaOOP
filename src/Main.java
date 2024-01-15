@@ -92,7 +92,7 @@ public class Main {
         System.out.println("phần tử 1 1" + mang2chieu2[1][1]);
 
 //        collection
-//        List interface
+//        List interface     //ArrayList   //LinkedList
         List<String> listString = new ArrayList<String>();   //Kế thừa cái kiểu gì đây???
         List<String> listString2 = new ArrayList<>();
         List<String> listString3 = new ArrayList<>();
@@ -104,7 +104,7 @@ public class Main {
         listString.add("Two");
         listString.add("Three");
         listString.add("Four");
-        listString.add(3, "Five");   //chèn vào vị trí 4
+        listString.add(3, "Five");                      //chèn vào vị trí 4
         listString2.add("Seven");
 
         listString.addAll(listString);                                  //addAll
@@ -130,8 +130,9 @@ public class Main {
         System.out.println("Collections.sort(listString): "+listString);
 //        String[] listCopy={};                                                                        //khai bao va cap phat null
 //        System.out.println("listCopy: "+Arrays.toString(Arrays.copyOf(listCopy, 9)));
-        List<String> listCopy1 = new ArrayList<>();
-        listCopy1.addAll(Collections.nCopies(9,null));                                      //addAll
+        List<String> listCopy1 = new ArrayList<>(Collections.nCopies(9, null));
+//        List<String> listCopy1 = new ArrayList<>();
+//        listCopy1.addAll(Collections.nCopies(9,null));                                      //addAll
         System.out.println("listCopy1: "+listCopy1);
 //        listCopy1.addAll()
         Collections.copy(listCopy1, listString);                                                  //muon copy phai List<>
@@ -186,6 +187,7 @@ public class Main {
         linkedList.add(2);
         linkedList.add(3);
         linkedList.add(4);
+        List<Integer> linkedList3=new LinkedList<>(List.of(0,1,2,3));
         System.out.println("getFirst: " + linkedList.getFirst());
         System.out.println("getLast: " + linkedList.getLast());
         System.out.println("get(1): " + linkedList.get(1));
