@@ -1,14 +1,14 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+import static java.lang.System.*;
 @FunctionalInterface
 interface MyFunctionInterface {                       //lambda
     public String functionString();
 }
 
 @FunctionalInterface
-interface FIAdd {
+interface FIAdd {       //phải có 1 abstract method
     public int add(int a);
 
     default void show() {                              //dung default de tao method trong interface
@@ -61,5 +61,9 @@ public class Main {
 
         list.forEach((names)->names.concat(" haha"));
         System.out.println(list);
+
+        out.println("static import: out.println()");
+
+
     }
 }

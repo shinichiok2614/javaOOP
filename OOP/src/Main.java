@@ -1,7 +1,8 @@
-interface IHuman {                          //ban thiet ke cua class
-    int speedWalk = 0;
+interface IHuman {              //ban thiet ke cua class //mặc định là public interface
+    //default, static methods,private methods
+    int speedWalk = 0;          //mặc định là pulic static final, chỉ được phép static final
 
-    void showIHuman();
+    void showIHuman();          //mặc định là public abstract
 
     void show1();
 
@@ -44,7 +45,7 @@ class Student<M> implements IHuman, ISuperman {
         IHuman.super.show2();
     }
 
-//    @Override                     //1 method === 1 default thi override hoac super
+    //    @Override                     //1 method === 1 default thi override hoac super
 //    public void show3() {
 //
 //    }
@@ -67,35 +68,49 @@ class Math {
 }
 
 
-abstract class Animal{                                  //abstract
+abstract class Animal {                           //abstract
+    //Giong nhu interface, nhưng cấp thấp hơn, và khong thể đa kế thừa
+    //bien: final, non-final, static và non-static
+    //pt: static, main và constructor
     public abstract void show();
+    void run(){
+        System.out.println("Animal.run");
+    }
 }
-class Dog extends Animal{
+
+class Dog extends Animal {
     @Override
     public void show() {
         System.out.println("Dog.show");
     }
 }
+
 public class Main {
-    public void myMethod(){
+    public void myMethod() {
         System.out.println("Instance method");
     }
+
     public static void main(String[] args) {
         System.out.println("Hello world!");
 //        IHuman<Math> man=new Student<Math>();
-        Dog dog=new Dog();
+        Dog dog = new Dog();
         dog.show();
+        dog.run();
 
 
-//        https://freetuts.net/method-references-trong-java-8-3014.html
-        Main instanceMain=new Main();                               //Dinh nghia phuong thuc cua interface bang method cua class ma k implements
-        INew objnew=instanceMain::myMethod;
+        Main instanceMain = new Main();                     //Dinh nghia phuong thuc cua interface bang method cua class ma k implements!!!
+        instanceMain.myMethod();
+//        Method references
+        INew objnew = instanceMain::myMethod;               //Gan Instance method vao method cua FunctionInterface
         objnew.show();
-
 
     }
 }
+
 @FunctionalInterface
-interface INew{
+interface INew {
     void show();
 }
+//https://topdev.vn/blog/checked-va-unchecked-exception-trong-java/
+//Số lượng đối số không cố định
+//http://vncoding.net/2018/03/17/phuong-thuc-trong-java/
