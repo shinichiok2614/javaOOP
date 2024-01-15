@@ -1,4 +1,21 @@
-interface IHuman {                          //ban thiet ke cua class
+//Class Name
+//
+//Class Modifies (public, private, synchronized etc.)
+//
+//Package Info
+//
+//Superclass
+//
+//Implemented Interfaces
+//
+//Constructors
+//
+//        Methods
+//
+//Fields
+//
+//Annotations
+interface IHu0man {                          //ban thiet ke cua class
     int speedWalk = 0;
 
     void showIHuman();
@@ -99,3 +116,4 @@ public class Main {
 interface INew{
     void show();
 }
+//https://viblo.asia/p/hieu-hon-ve-functional-interface-trong-java-Az45b09qZxY
