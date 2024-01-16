@@ -13,7 +13,7 @@ interface ICalculate {
 interface FlyAble{
     void tryFly();
 }
-public class Chicken implements FlyAble{
+class Chicken implements FlyAble{
     @Override
     public void tryFly(){
         System.out.println("Chicken.tryFly");
@@ -34,6 +34,11 @@ public class Main implements FlyAble{
                 return 0;
             }
         });
+    }
+
+    @Override
+    public void tryFly() {
+
     }
 }
 //https://blog.tonghoangvu.id.vn/hieu-hon-ve-functional-interface-trong-java
