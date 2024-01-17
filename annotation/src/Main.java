@@ -29,7 +29,8 @@ class ClassA {
         System.out.println("A.function");
     }
 }
-
+//Single-Value Annotation - 1 phuong thuc
+//Multi-Value Annotation  - nhieu phuong thuc
 @interface MyAnnotation {
     int value();
 
@@ -48,7 +49,7 @@ class TheClass {
 
 
 public class Main {
-    @MyAnnotation(value = 42)
+    @MyAnnotation(value = 42)           //Multi-Value Annotation
     @SuppressWarnings({"rawtypes", "unchecked", "MismatchedQueryAndUpdateOfCollection"})
     public static void main(String[] args) throws Exception {
 //    public static void main(String[] args){

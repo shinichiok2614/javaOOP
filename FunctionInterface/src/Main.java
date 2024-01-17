@@ -10,7 +10,7 @@ interface ICalculate {
     double calculate();
 }
 @FunctionalInterface
-interface FlyAble{
+interface FlyAble{                  //1.lambda  //2.ham(ham)
     void tryFly();
 }
 class Chicken implements FlyAble{
